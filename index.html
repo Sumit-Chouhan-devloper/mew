@@ -9,6 +9,13 @@
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- slider css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- root css -->
     <link rel="stylesheet" href="./assets/css/root.css">
     <!-- style css -->
@@ -16,86 +23,620 @@
 </head>
 
 <body>
-    <div class="vh-100 d-flex flex-column color_skyblue">
-        <!-- nav bar -->
-        <nav class="container mycontainer py-3">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="logo">Mew</div>
-                <ul class="d-flex align-items-center mb-0 navbar" id="navBar">
-                    <li><a href="#" class="active_link">Home</a></li>
-                    <li class="ps-lg-5"><a href="#">About</a></li>
-                    <li class="ps-lg-5"><a href="#">Services</a></li>
-                    <li class="ps-lg-5"><a href="#">Facilities</a></li>
-                    <li class="nav_btn d-lg-none">Sign up</li>
-                </ul>
-                <div class="d-flex flex-column mobile_view d-lg-none" onclick="shownav()">
-                    <span class="icon"></span>
-                    <span class="icon"></span>
-                    <span class="icon"></span>
-                </div>
-                <div class="nav_btn d-none d-lg-block">Sign up</div>
+
+    <!-- nav bar -->
+    <nav class="container mycontainer py-3 color_skyblue">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="logo text-black cursor_p">Mew</div>
+            <ul class="d-flex align-items-center mb-0 navbar" id="navBar">
+                <li><a href="#" class="active_link">Home</a></li>
+                <li class="ps-lg-5"><a href="#">About</a></li>
+                <li class="ps-lg-5"><a href="#">Services</a></li>
+                <li class="ps-lg-5"><a href="#">Facilities</a></li>
+                <li class="nav_btn d-lg-none">Sign up</li>
+            </ul>
+            <div class="d-flex flex-column mobile_view d-lg-none" onclick="shownav()">
+                <span class="icon"></span>
+                <span class="icon"></span>
+                <span class="icon"></span>
             </div>
-        </nav>
-        <!-- hero section -->
-        <section class="flex-grow-1 position-relative hero_s">
-            <div class="container mycontainer">
-                <div class="row justify-content-between">
-                    <div class="col-lg-5">
-                        <div class="position-absolute overflow_img"><img class="w-100 position-relative"
-                                src="./assets/images/hero_cat.png" alt="cat">
-                            <div class=" hero_dog"><img class="w-100" src="./assets/images/hero_dog.png" alt="dog">
+            <div class="nav_btn d-none d-lg-block cursor_p">Sign up</div>
+        </div>
+    </nav>
+    <!-- hero section -->
+    <section class="hero_section">
+        <div class="container mycontainer">
+            <div class="row ">
+                <div class="col-xl-6    d-flex justify-content-center">
+                    <img class="my_img" src="./assets/images/hero_cat.png" alt="">
+                </div>
+                <div class="col-xl-6 d-flex justify-content-center">
+                    <div class="position-relative">
+                        <h1 class="fs_5xl pt-4">We take care of your pet and help them to grow</h1>
+                        <p class="fs">Best pets are waiting for adoption. Find out the the perfect one you will like
+                            it. It’s our promise.</p>
+                        <div class="d-flex pt-xl-5 pb-lg-2 flex-column gap-4 flex-sm-r">
+                            <div class="pe-5"><button class="hero_btn btn_h">Contact us</button></div>
+                            <div class="d-flex">
+                                <div><img class="icon_img1" src="./assets/images/hero_z1.png" alt="girl_img"></div>
+                                <div><img class="icon_img2 " src="./assets/images/hero_z2.png" alt="girl_img"></div>
+                                <div><img class="icon_img3" src="./assets/images/hero_z3.png" alt="girl_img"></div>
+                                <div><img class="icon_img4" src="./assets/images/hero_z4.png" alt="girl_img"></div>
+                                <div><img class="icon_img5 " src="./assets/images/hero_z5.png" alt="girl_img"></div>
+
                             </div>
-                            <div class="hero_star d-none d-md-block"><svg width="39" height="39" viewBox="0 0 39 39"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.5 0L22.3956 16.6044L39 19.5L22.3956 22.3956L19.5 39L16.6044 22.3956L0 19.5L16.6044 16.6044L19.5 0Z"
-                                        fill="#5BD6E2" />
+                        </div>
+                        <div class="d-flex align-items-center pt-5">
+                            <div class="pe-4 icon_h"><img src="./assets/images/dog_small_foot.png" alt="dog_foot"></div>
+                            <div>
+                                <h3 class="ff_Slackey fs_lg color_half_opcity_blue">How to take care
+                                </h3>
+                                <p class="ff_Slackey mb-0 fs_lg color_half_opcity_blue">perfect one you will like
+                                    it. It’s our promise.</p>
+                            </div>
+                        </div>
+                        <div class="hero_star "><img src="./assets/images/hero_star.png" alt="star"></div>
+                        <div class="hero_dog_foot d-none d-xl-block icon_h"><img src="./assets/images/dog_foot_hero.png"
+                                alt="dogfoot"></div>
+                        <div class="golden_circle"><img class="w-100" src="./assets/images/golden_circle.png"
+                                alt="golden_circle">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    </div>
+    <!-- orange row section -->
+    <section class="py-5 ">
+        <div class="container mycontainer">
+            <div class="d-flex flex-column-reverse flex-xl-row">
+                <div class="col-xl-7 py-xl-5">
+                    <div class="row orange_box">
+
+                        <div class="col-lg-4 d-flex justify-content-center col-md-6">
+                            <div class="box py-5 border_r">
+                                <p>Adopted</p>
+                                <h4>2500+</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center col-md-6">
+                            <div class="box py-5 border_r">
+                                <p>Customers</p>
+                                <h4>1800+</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center col-md-6">
+                            <div class="box py-5 ">
+                                <p>Testimonials</p>
+                                <h4>1300+</h4>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="box">
+                        <div class="blue_rgb_box box">
+                            <p class="ff_poppins text-white fw-medium">Lorem ipsum dolor sit amet, consectetur ipcing
+                                elit, sed do eiusmod tempor incididu ut labore et quis nostrud sed do eius .....</p>
+                            <div
+                                class="d-flex align-items-center justify-content-between flex-column-reverse flex-sm-row">
+                                <h4 class=" ff_Slackey fs_md text-white mb-0 pt-4 pt-sm-0">Daniel Kahneman</h4>
+                                <div><img src="./assets/images/orange_box_img.png" alt="img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3rd section -->
+    <section class="py-lg-5 py-4">
+        <div class="container mycontainer">
+            <div class="row justify-content-between flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="box">
+                        <h2 class="ff_Slackey color_dark_blue fs_4xl pt-5">Lets book a call and stay connected</h2>
+                        <div class="d-flex pt-3 flex-column flex-sm-row">
+                            <div class="d-flex">
+                                <div class="pe-1"><img src="./assets/images/orange_box.png" alt="checkbox"></div>
+                                <p class="ps-3 ff_poppins color_skyblue fw-medium fs_md ">Vaccination Service </p>
+                            </div>
+                            <div class="d-flex ps-sm-4">
+                                <div class="pe-1"><img src="./assets/images/orange_box.png" alt="checkbox"></div>
+                                <p class="ps-3 ff_poppins color_skyblue fw-medium fs_md ">Veterinary Service </p>
+                            </div>
+                        </div>
+                        <p class="pt-4 pb-1 ff_poppins color_skyblue line_h_30">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
+                        <div class="d-flex pt-4 flex-column flex-sm-row">
+                            <div class="pe-4"><button
+                                    class="bg_orange rounded-3 border-0 px-4 ff_poppins text-white fw-semibold  py-3 btn_h">Book
+                                    a Schedule</button></div>
+                            <div class="d-flex align-items-center pt-3 pt-sm-0 ">
+                                <div class="icon_h"><img src="./assets/images/mobile_img.png " alt="mobile_img"></div>
+                                <p class="mb-0 ff_poppins fw-medium color_skyblue">Emergency Call</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="box  position-relative">
+                        <div class=""><img class="w-100 doctor_img doctor_img_bg_sm "
+                                src="./assets/images/doctor_with_dog.png" alt="docter_img "></div>
+                        <div class="position-absolute dots_group img_animation"><img  src="./assets/images/dots_box.png"
+                                alt="yellow_dots"></div>
+                        <div class="position-absolute skyblue_plus d-none d-sm-block"><img
+                                src="./assets/images/skyblue_plus.png" alt="plus"></div>
+                        <div class="position-absolute orange_plus d-none d-sm-block"><img
+                                src="./assets/images/orange_plus.png" alt="plus"></div>
+                        <div class="position-absolute  yellow_zigzag img_animation"><img src="./assets/images/yellow_zigzag.png"
+                                alt="yellow_zigzag"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our services -->
+    <section class="py-4 py-lg-5 bg_orange_100 overflow-hidden">
+        <div class="container mycontainer">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="img_animation"><img src="./assets/images/dog_foot_hero.png" alt="dog_foot"></div>
+                <h3 class="ps-3 ff_Slackey color_dark_blue fs_4xl mb-0">Our Services</h3>
+            </div>
+            <div class="d-flex justify-content-center">
+                <p class="mw_480 text-center ff_poppins pt-4 color_half_opcity_blue">Best pets are waiting for adoption.
+                    Find out the the perfect one you will like it. It’s our promise.</p>
+            </div>
+            <div class="row slider1">
+                <div class="col-lg-3">
+                    <div
+                        class="box1 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center  mx-3 my-5">
+                        <div class="mt-4"><img src="./assets/images/injection.png" alt="injection"></div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Vaccination</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div
+                        class="box2 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center mx-3 my-5">
+                        <div class="mt-4 pb-2 rounded-3"><img src="./assets/images/small_cat.png" alt="cat"></div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Pet Grooming</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div
+                        class="box3 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center mx-3 my-5">
+                        <div class="mt-4 pb-2 rounded-3 "><img src="./assets/images/doctor_small_img.png" alt="doctor">
+                        </div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Veterinary</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div
+                        class="box4 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center mx-3 my-5">
+                        <div class="mt-4  "><img src="./assets/images/removelable_hand.png" alt="remove_hand"></div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Cleaning</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div
+                        class="box1 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center  mx-3 my-5">
+                        <div class="mt-4"><img src="./assets/images/injection.png" alt="injection"></div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Vaccination</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div
+                        class="box2 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center mx-3 my-5">
+                        <div class="mt-4 pb-2 rounded-3"><img src="./assets/images/small_cat.png" alt="cat"></div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Pet Grooming</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div
+                        class="box3 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center mx-3 my-5">
+                        <div class="mt-4 pb-2 rounded-3 "><img src="./assets/images/doctor_small_img.png" alt="doctor">
+                        </div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Veterinary</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div
+                        class="box4 py-3 bg-white slider_card rounded-5 d-flex flex-column align-items-center mx-3 my-5">
+                        <div class="mt-4  "><img src="./assets/images/removelable_hand.png" alt="remove_hand"></div>
+                        <h5 class="border_bottom pt-4 ff_Slackey fs_lg">Cleaning</h5>
+                        <p class="mw_178 text-center pt-3 ff_poppins fs_xsm pb-4">Perfect one you will like it. It’s our
+                            promise.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-lg-5 pt-4 position-relative"> <button
+                    class="border-0 rounded-3 bg_orange text-white ff_poppins fw-semibold px-4 py-3 btn_h">Learn
+                    More</button>
+                <span class="position-absolute rgb_trangle d-none d-sm-block">
+                    <span><svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12.5L0 0V25L22 12.5ZM18.692 12.5L1.65765 22.1809V2.81912L18.692 12.5Z"
+                                fill="#FF5B2E" />
+                        </svg>
+                    </span>
+                    <span class="ps-2"><svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12.5L0 0V25L22 12.5ZM18.692 12.5L1.65765 22.1809V2.81912L18.692 12.5Z"
+                                fill="#73BFFF" />
+                        </svg>
+                    </span>
+                    <span class="ps-2"><svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12.5L0 0V25L22 12.5ZM18.692 12.5L1.65765 22.1809V2.81912L18.692 12.5Z"
+                                fill="#FABF3E" />
+                        </svg>
+                    </span>
+                    <span class="ps-2"><svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12.5L0 0V25L22 12.5ZM18.6847 12.5L1.65038 22.1809V2.81912L18.6847 12.5Z"
+                                fill="#00C27E" />
+                        </svg>
+                    </span>
+                </span>
+            </div>
+        </div>
+
+    </section>
+    <!-- dog section -->
+    <section class="py-lg-5 py-4 dog_s ">
+        <div class="container mycontainer py-lg-5 overflow-hidden">
+            <div class="d-flex px-lg-5 mx-lg-3 mb-0 flex-column flex-xl-row">
+                <h2 class="ff_Slackey fs_4xl color_dark_blue">Facilities we
+                    provides</h2>
+                <p class="ff_poppins line_h_30 color_half_opcity_blue mw_577 mb-0">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+            <div class="row justify-content-between  py-5 ">
+                <div class="col-md-3 d-flex flex-column justify-content-between align-items-center gap-4">
+                    <div class="box">
+                        <h4>Feed Training</h4>
+                        <p class="mb-4">Ut enim ad minim velit esse cillum dolore eu fugiat..</p>
+                    </div>
+                    <div class="box">
+                        <h4>Health test</h4>
+                        <p>tempor incididunt ut labore et dolore magna aliqua...</p>
+                    </div>
+                    <div class="box">
+                        <h4>Vaccination</h4>
+                        <p>tempor incididunt ut labore et dolore magna aliqua...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="center_dog position-relative">
+                        <img class="w-100 img1" src="./assets/images/dog.png" alt="dog">
+                        <div class="circle_1 position-absolute"><img src="./assets/images/dog_circle.png" alt="circle">
+                        </div>
+                        <div class="circle_2 position-absolute"><img src="./assets/images/dog_circle.png" alt="circle">
+                        </div>
+                        <div class="circle_3 position-absolute"><img src="./assets/images/dog_circle.png" alt="circle">
+                        </div>
+                        <div class="circle_4 position-absolute "><img src="./assets/images/dog_circle.png" alt="circle">
+                        </div>
+                        <div class="line_1 position-absolute d-none d-md-block  line_common"><img class=""
+                                src="./assets/images/dog_line.png" alt="dog_line"></div>
+                        <div class="line_2 position-absolute d-none d-md-block line_common"><img class=""
+                                src="./assets/images/dog_line.png" alt="dog_line"></div>
+                        <div class="line_3 position-absolute d-none d-md-block line_common"><img class=""
+                                src="./assets/images/dog_line.png" alt="dog_line"></div>
+                        <div class="line_4 position-absolute d-none d-md-block line_common"><img class=""
+                                src="./assets/images/dog_line.png" alt="dog_line"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex flex-column justify-content-between align-items-center gap-4 mt-4 mt-md-0">
+                    <div class="box ">
+                        <h4>Overnight Care</h4>
+                        <p>Ut enim ad minim velit esse cillum dolore eu fugiat..</p>
+                    </div>
+                    <div class="box">
+                        <h4>Medical Care</h4>
+                        <p>ttempor incididunt ut labore et dolore magna aliqua...</p>
+                    </div>
+                    <div class="box ">
+                        <h4>Traning </h4>
+                        <p>tempor incididunt ut labore et dolore magna aliqua...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Groomers -->
+    <section class="py-lg-5 py-4 bg_orange_200  ">
+        <div class="container mycontainer">
+            <div class="d-flex justify-content-between align-items-center pb-5 mb-5">
+                <div class="d-none d-md-block icon_h"><img src="./assets/images/skyblue_zigzag.png" alt="zigzag"></div>
+                <h2 class="mb-0 ff_Slackey color_dark_blue  fs_4xl mx-auto">Our Groomers</h2>
+                <div class="d-none d-md-block icon_h"><img src="./assets/images/golden_circle.png" alt="golden_circle"></div>
+            </div>
+            <div class="row py-5 mt-lg-5">
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-md-5 mt-0 mb-5 img_animation2">
+                    <div class="card_s bg_orange_300">
+                        <div class="d-flex justify-content-center"><img class="" src="./assets/images/team_1.png"
+                                alt="man"></div>
+                        <h4 class="ff_poppins fw-semibold color_dark_blue fs_xl text-center mb-0">Adam Smith</h4>
+                        <p class="ff_poppins color_half_opcity_blue text-center mb-0 pb-4 pt-2">Veterinarian</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-5 mb-5 img_animation">
+                    <div class="card_s bg_orange_300">
+                        <div class="d-flex justify-content-center"><img class="" src="./assets/images/team_2.png"
+                                alt="man"></div>
+                        <h4 class="ff_poppins fw-semibold color_dark_blue fs_xl text-center mb-0">Morgan Mark</h4>
+                        <p class="ff_poppins color_half_opcity_blue text-center mb-0 pb-4 pt-2">Trainer</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-5 mb-5 img_animation2">
+                    <div class="card_s bg_orange_300">
+                        <div class="d-flex justify-content-center"><img class="" src="./assets/images/team_3.png"
+                                alt="man"></div>
+                        <h4 class="ff_poppins fw-semibold color_dark_blue fs_xl text-center mb-0">Ana Fargun</h4>
+                        <p class="ff_poppins color_half_opcity_blue text-center mb-0 pb-4 pt-2">Trainer</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mt-5 img_animation">
+                    <div class="card_s bg_orange_300">
+                        <div class="d-flex justify-content-center"><img class="" src="./assets/images/team_4.png"
+                                alt="man"></div>
+                        <h4 class="ff_poppins fw-semibold color_dark_blue fs_xl text-center mb-0">Mouran Maz</h4>
+                        <p class="ff_poppins color_half_opcity_blue text-center mb-0 pb-4 pt-2">Care Taker</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center"><button
+                    class="bg_orange text-white ff_poppins fw-semibold border-0 rounded-3 px-4 py-3 btn_h">View
+                    Team</button></div>
+        </div>
+    </section>
+    <!-- bloge section -->
+    <section class="bloge_s py-lg-5 py-4  bg_orange_100 ">
+        <div class="container mycontainer my-lg-5 overflow-hidden">
+            <div class="row align-items-center ">
+                <div class="col-md-5">
+                    <h2 class="ff_Slackey fs_4xl">DaCode Blog</h2>
+                    <p class="ff_poppins color_half_opcity_blue pt-4 line_h_30 mw_362">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <div class="pt-5"><button
+                            class="bg_orange py-3 px-5 text-white ff_poppins fw-semibold border-0 rounded-3 btn_h">Learn
+                            More</button></div>
+                </div>
+                <div class="col-md-7 position-relative">
+                    <div class="dog_box dog_slider my-lg-4 my-3">
+
+                        <div class=" d-flex flex-column flex-lg-row justify-content-center"><img class=""
+                                src="./assets/images/slider_dog.png" alt="">
+                            <div class="mx-auto">
+                                <h3 class="ff_poppins fs_lg fw-semibold mw_278 pt-4">Why Your SaaS Business should use
+                                    WordPress</h3>
+                                <p>A content management system like WordPress can help you build a highly engaging
+                                    website
+                                    for your SaaS business, with little to no effort</p>
+                            </div>
+                        </div>
+                        <div class=" d-flex flex-column flex-lg-row justify-content-center"><img class=""
+                                src="./assets/images/slider_dog.png" alt="">
+                            <div class="mx-auto">
+                                <h3 class="ff_poppins fs_lg fw-semibold mw_278 pt-4">Why Your SaaS Business should use
+                                    WordPress</h3>
+                                <p>A content management system like WordPress can help you build a highly engaging
+                                    website
+                                    for your SaaS business, with little to no effort</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="d-flex arrow_parent gap-3">
+                        <div class="next_arrow btn_h img_animation">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.9467 7.88379L2.82078 7.88379" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.9632 12.0261L2.82075 7.88368L6.9632 3.74124" stroke="white"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="prev_arrow btn_h img_animation"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.82071 7.88379L12.9467 7.88379" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.80426 3.74146L12.9467 7.8839L8.80426 12.0263" stroke="white"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg_orange_200 py-lg-5 py-4 ">
+        <div class="container mycontainer">
+            <div class="row py-lg-5">
+                <div class="col-lg-6">
+                    <h3 class="pb-lg-2">Mew</h3>
+                    <p class=" pt-4 pb-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                    <div class="d-flex gap-4 pt-4">
+                        <div class="icon_box img_animation">
+                            <div class="f_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.7"
+                                        d="M12.4444 0H1.55556C0.7 0 0 0.7 0 1.55556V12.4444C0 13.3008 0.7 14 1.55556 14H7V8.55556H5.44444V6.63056H7V5.03611C7 3.353 7.94267 2.17078 9.92911 2.17078L11.3314 2.17233V4.19844H10.4004C9.62733 4.19844 9.33333 4.77867 9.33333 5.31689V6.63133H11.3307L10.8889 8.55556H9.33333V14H12.4444C13.3 14 14 13.3008 14 12.4444V1.55556C14 0.7 13.3 0 12.4444 0Z"
+                                        fill="#000958" />
                                 </svg>
                             </div>
-                            <div class="hero_dog_foot"><img src="./assets/images/dog_foot_hero.png" alt="dog_foot">
+                        </div>
+                        <div class="icon_box img_animation2">
+                            <div class="footer_icon"><svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.7"
+                                        d="M4.58338 11.9998C5.70216 12.007 6.8112 11.7889 7.84618 11.3583C8.88116 10.9277 9.82148 10.2931 10.6126 9.49132C11.4037 8.68956 12.0299 7.73659 12.4548 6.68769C12.8797 5.63878 13.0948 4.51481 13.0878 3.38098V2.98494C13.6677 2.55432 14.1697 2.02517 14.5714 1.42093C14.0253 1.66298 13.4475 1.82351 12.856 1.89751C13.4831 1.51878 13.9537 0.922635 14.1806 0.219387C13.5962 0.574774 12.9552 0.82461 12.2864 0.957762C11.8359 0.471352 11.2399 0.148943 10.5904 0.0404223C9.94098 -0.0680986 9.27434 0.0433178 8.69367 0.357432C8.113 0.671547 7.65065 1.17085 7.37818 1.77808C7.10571 2.38531 7.03829 3.06663 7.18636 3.7166C5.99815 3.65749 4.83554 3.34541 3.77424 2.80068C2.71294 2.25595 1.77675 1.49079 1.02662 0.555012C0.648377 1.22034 0.533729 2.00647 0.705893 2.75424C0.878056 3.50202 1.32417 4.15555 1.9539 4.58251C1.48934 4.56436 1.03553 4.43558 0.629221 4.20661V4.24018C0.625093 4.93548 0.856218 5.61122 1.28408 6.15476C1.71193 6.69831 2.31068 7.07683 2.98052 7.22724C2.54844 7.34502 2.09583 7.36337 1.65584 7.28094C1.84977 7.87391 2.21995 8.39157 2.71562 8.76292C3.21128 9.13426 3.80817 9.34111 4.42442 9.3551C3.37078 10.2147 2.06126 10.6878 0.708701 10.6976C0.471554 10.6906 0.234962 10.6705 0 10.6372C1.36902 11.5212 2.96012 11.9872 4.58338 11.9797"
+                                        fill="#000958" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="icon_box img_animation">
+                            <div class="footer_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.7"
+                                        d="M13.2222 0H0.777778C0.571498 0 0.373667 0.0819442 0.227806 0.227806C0.0819442 0.373667 0 0.571498 0 0.777778V13.2222C0 13.4285 0.0819442 13.6263 0.227806 13.7722C0.373667 13.9181 0.571498 14 0.777778 14H13.2222C13.4285 14 13.6263 13.9181 13.7722 13.7722C13.9181 13.6263 14 13.4285 14 13.2222V0.777778C14 0.571498 13.9181 0.373667 13.7722 0.227806C13.6263 0.0819442 13.4285 0 13.2222 0ZM4.15256 11.9288H2.07433V5.24767H4.15256V11.9288ZM3.11344 4.33533C2.79412 4.33533 2.48788 4.20848 2.26209 3.98269C2.03629 3.7569 1.90944 3.45065 1.90944 3.13133C1.90944 2.81201 2.03629 2.50577 2.26209 2.27998C2.48788 2.05418 2.79412 1.92733 3.11344 1.92733C3.43277 1.92733 3.73901 2.05418 3.9648 2.27998C4.19059 2.50577 4.31744 2.81201 4.31744 3.13133C4.31744 3.45065 4.19059 3.7569 3.9648 3.98269C3.73901 4.20848 3.43277 4.33533 3.11344 4.33533ZM11.9296 11.9288H9.85367V8.68C9.85367 7.90533 9.83967 6.909 8.77411 6.909C7.693 6.909 7.52889 7.75367 7.52889 8.62556V11.9296H5.45456V5.24844H7.44567V6.16156H7.47444C7.75056 5.63656 8.42878 5.08278 9.43756 5.08278C11.5407 5.08278 11.9288 6.46567 11.9288 8.26544V11.9288H11.9296Z"
+                                        fill="#000958" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="icon_box img_animation2">
+                            <div class="footer_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.7" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7 0C5.0988 0 4.8608 0.00839996 4.1139 0.042C3.3691 0.0763 2.8602 0.1946 2.415 0.3675C1.94774 0.543091 1.52443 0.818532 1.1746 1.1746C0.818549 1.52444 0.543112 1.94775 0.3675 2.415C0.1946 2.8602 0.0763 3.3691 0.042 4.1139C0.00769996 4.8608 0 5.0988 0 7C0 8.9012 0.00769996 9.1392 0.042 9.8861C0.0763 10.6309 0.1946 11.1398 0.3675 11.585C0.543132 12.0522 0.818567 12.4755 1.1746 12.8254C1.52446 13.1814 1.94776 13.4569 2.415 13.6325C2.8602 13.8054 3.3691 13.9237 4.1139 13.958C4.8608 13.9916 5.0988 14 7 14C8.9012 14 9.1392 13.9916 9.8861 13.958C10.6309 13.9237 11.1398 13.8054 11.585 13.6325C12.0522 13.4569 12.4756 13.1815 12.8254 12.8254C13.1815 12.4756 13.4569 12.0522 13.6325 11.585C13.8054 11.1398 13.9237 10.6309 13.958 9.8861C13.9916 9.1392 14 8.9012 14 7C14 5.0988 13.9916 4.8608 13.958 4.1139C13.9237 3.3691 13.8054 2.8602 13.6325 2.415C13.4569 1.94775 13.1815 1.52444 12.8254 1.1746C12.4756 0.818532 12.0523 0.543091 11.585 0.3675C11.1398 0.1946 10.6309 0.0763 9.8861 0.042C9.1392 0.00839996 8.9012 0 7 0ZM7 1.2614C8.869 1.2614 9.0902 1.2684 9.828 1.302C10.5112 1.3335 10.8815 1.4469 11.1286 1.5428C11.4548 1.6702 11.6886 1.8221 11.9336 2.0664C12.1786 2.3114 12.3298 2.5452 12.4572 2.8714C12.5524 3.1185 12.6672 3.4888 12.698 4.1713C12.7316 4.9098 12.7386 5.1303 12.7386 7C12.7386 8.869 12.7316 9.0902 12.698 9.828C12.6665 10.5112 12.5524 10.8815 12.4572 11.1286C12.345 11.4327 12.1661 11.7077 11.9336 11.9336C11.6886 12.1786 11.4548 12.3298 11.1286 12.4572C10.8815 12.5524 10.5112 12.6672 9.8287 12.698C9.0909 12.7316 8.8697 12.7386 7 12.7386C5.131 12.7386 4.9091 12.7316 4.172 12.698C3.4888 12.6665 3.1185 12.5524 2.8714 12.4572C2.56731 12.345 2.29223 12.1661 2.0664 11.9336C1.8339 11.7078 1.65498 11.4327 1.5428 11.1286C1.4469 10.8815 1.3328 10.5112 1.302 9.8287C1.2684 9.0902 1.2614 8.8697 1.2614 7C1.2614 5.131 1.2684 4.9098 1.302 4.172C1.3335 3.4888 1.4469 3.1185 1.5428 2.8714C1.6702 2.5452 1.8221 2.3114 2.0664 2.0664C2.3114 1.8214 2.5452 1.6702 2.8714 1.5428C3.1185 1.4469 3.4888 1.3328 4.1713 1.302C4.9098 1.2684 5.1303 1.2614 7 1.2614ZM7 9.3331C6.38122 9.3331 5.78779 9.08729 5.35025 8.64975C4.91271 8.21221 4.6669 7.61878 4.6669 7C4.6669 6.38122 4.91271 5.78779 5.35025 5.35025C5.78779 4.91271 6.38122 4.6669 7 4.6669C7.61878 4.6669 8.21221 4.91271 8.64975 5.35025C9.08729 5.78779 9.3331 6.38122 9.3331 7C9.3331 7.61878 9.08729 8.21221 8.64975 8.64975C8.21221 9.08729 7.61878 9.3331 7 9.3331ZM7 3.4055C6.52796 3.4055 6.06055 3.49847 5.62444 3.67911C5.18834 3.85976 4.79208 4.12452 4.4583 4.4583C4.12452 4.79209 3.85976 5.18834 3.67911 5.62444C3.49847 6.06055 3.4055 6.52796 3.4055 7C3.4055 7.47204 3.49847 7.93945 3.67911 8.37556C3.85976 8.81166 4.12452 9.20791 4.4583 9.54169C4.79208 9.87547 5.18834 10.1402 5.62444 10.3209C6.06055 10.5015 6.52796 10.5945 7 10.5945C7.95332 10.5945 8.8676 10.2158 9.54169 9.54169C10.2158 8.8676 10.5945 7.95332 10.5945 7C10.5945 6.04668 10.2158 5.1324 9.54169 4.4583C8.8676 3.78421 7.95332 3.4055 7 3.4055ZM11.5766 3.2634C11.5766 3.37371 11.5549 3.48294 11.5127 3.58485C11.4704 3.68677 11.4086 3.77937 11.3306 3.85737C11.2526 3.93537 11.16 3.99724 11.0581 4.03946C10.9561 4.08167 10.8469 4.1034 10.7366 4.1034C10.6263 4.1034 10.5171 4.08167 10.4151 4.03946C10.3132 3.99724 10.2206 3.93537 10.1426 3.85737C10.0646 3.77937 10.0028 3.68677 9.96054 3.58485C9.91833 3.48294 9.8966 3.37371 9.8966 3.2634C9.8966 3.04062 9.9851 2.82696 10.1426 2.66943C10.3002 2.5119 10.5138 2.4234 10.7366 2.4234C10.9594 2.4234 11.173 2.5119 11.3306 2.66943C11.4881 2.82696 11.5766 3.04062 11.5766 3.2634Z"
+                                        fill="#000958" />
+                                </svg>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 position-relative">
-                        <div>
-                            <h1 class="fs_5xl">We take care of your pet and help them to grow</h1>
-                            <p class="fs">Best pets are waiting for adoption. Find out the the perfect one you will like
-                                it. It’s our promise.</p>
-                            <div class="d-flex pt-5 pb-lg-2">
-                                <div class="pe-5"><button class="hero_btn btn_h">Contact us</button></div>
-                                <div class="d-flex">
-                                    <img class="icon_img1" src="./assets/images/hero_z1.png" alt="girl_img">
-                                    <img class="icon_img2 " src="./assets/images/hero_z2.png" alt="girl_img">
-                                    <img class="icon_img3" src="./assets/images/hero_z3.png" alt="girl_img">
-                                    <img class="icon_img4" src="./assets/images/hero_z4.png" alt="girl_img">
-                                    <img class="icon_img5 " src="./assets/images/hero_z5.png" alt="girl_img">
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-5">
-                                <div class="pe-4"><img src="./assets/images/dog_small_foot.png" alt="dog_foot"></div>
-                                <div>
-                                    <h3 class="ff_Slackey fs_lg color_half_opcity_blue">How to take care
-                                    </h3>
-                                    <p class="ff_Slackey mb-0 fs_lg color_half_opcity_blue">perfect one you will like it. It’s our promise.</p>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-lg-6 pt-4">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4>Useful links</h4>
+                            <ul class="ps-0">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#"> Shop</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
                         </div>
-                        <div class="position-absolute golden_circle">
-                            <img class="w-100" src="./assets/images/golden_circle.png" alt="golden_circle">
+                        <div class="col-sm-4">
+                            <h4>UExplore</h4>
+                            <ul class="ps-0">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#"> Services</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Adopt Pet</a></li>
+
+
+
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4>Contact Info</h4>
+                            <ul class="ps-0">
+                                <li><a href="#">361-777-5681</a></li>
+                                <li><a href="#"> 654 White Avenue</a></li>
+                                <li><a href="#">Portland, TX 78374</a></li>
+
+
+
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <script>
-            function shownav() {
-                document.getElementById('navBar').classList.toggle('shownav');
+        </div>
+    </footer>
 
-            }
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
+
+    <script>
+        function shownav() {
+            document.getElementById('navBar').classList.toggle('shownav');
+
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- slider js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.slider1').slick({
+            dots: false,
+            infinite: true,
+            autoplay: true,
+
+            autoplayspeed: 10,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: false,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+              
+            ]
+        });
+    </script>
+    <script>
+        $('.dog_slider').slick({
+            infinite: true,
+            dots: false,
+            nextArrow: '.next_arrow',
+            prevArrow: '.prev_arrow',
+            fade: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+    </script>
 </body>
 
 </html>
