@@ -99,28 +99,23 @@ nav ul li a:hover::before {
 .img_animation {
     animation: translate 4s ease-in infinite;
 }
-
 @keyframes translate {
     0% {
         transform: translatey(-20px);
 
     }
-
     25% {
         transform: translatey(0px);
 
     }
-
     50% {
         transform: translatey(-20px);
 
     }
-
     75% {
         transform: translatey(0px);
 
     }
-
 }
 
 .img_animation2 {
